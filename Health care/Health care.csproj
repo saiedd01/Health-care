@@ -49,6 +49,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="diagnosis.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="diagnosis.Designer.cs">
+      <DependentUpon>diagnosis.cs</DependentUpon>
+    </Compile>
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -69,6 +75,9 @@
     <Compile Include="tests.Designer.cs">
       <DependentUpon>tests.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="diagnosis.resx">
+      <DependentUpon>diagnosis.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
