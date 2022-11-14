@@ -16,7 +16,7 @@ namespace Health_care
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new patients());
+            Application.Run(new tests());
         }
     }
 }
