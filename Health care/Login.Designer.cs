@@ -101,9 +101,9 @@ namespace Health_care
             this.label2.ForeColor = System.Drawing.Color.Lime;
             this.label2.Location = new System.Drawing.Point(292, 182);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(118, 27);
+            this.label2.Size = new System.Drawing.Size(108, 27);
             this.label2.TabIndex = 4;
-            this.label2.Text = "Usaer Name";
+            this.label2.Text = "User Name";
             // 
             // label3
             // 
