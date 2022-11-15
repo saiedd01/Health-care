@@ -31,9 +31,9 @@ namespace Health_care
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(patient));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.label10 = new System.Windows.Forms.Label();
             this.PatAddTb = new System.Windows.Forms.TextBox();
@@ -143,7 +143,7 @@ namespace Health_care
             // PatPhoneTb
             // 
             this.PatPhoneTb.Font = new System.Drawing.Font("Gadugi", 11.8F);
-            this.PatPhoneTb.Location = new System.Drawing.Point(321, 163);
+            this.PatPhoneTb.Location = new System.Drawing.Point(330, 163);
             this.PatPhoneTb.Multiline = true;
             this.PatPhoneTb.Name = "PatPhoneTb";
             this.PatPhoneTb.Size = new System.Drawing.Size(236, 33);
@@ -173,14 +173,14 @@ namespace Health_care
             // 
             // PatGenCb
             // 
-            this.PatGenCb.Font = new System.Drawing.Font("Gadugi", 14.8F);
+            this.PatGenCb.Font = new System.Drawing.Font("Gadugi", 11.8F);
             this.PatGenCb.FormattingEnabled = true;
             this.PatGenCb.Items.AddRange(new object[] {
             "Male",
             "Female"});
             this.PatGenCb.Location = new System.Drawing.Point(32, 163);
             this.PatGenCb.Name = "PatGenCb";
-            this.PatGenCb.Size = new System.Drawing.Size(236, 37);
+            this.PatGenCb.Size = new System.Drawing.Size(236, 32);
             this.PatGenCb.TabIndex = 7;
             // 
             // label24
@@ -300,59 +300,61 @@ namespace Health_care
             this.EditBtn.TabIndex = 24;
             this.EditBtn.Text = "Edit";
             this.EditBtn.UseVisualStyleBackColor = false;
+            this.EditBtn.Click += new System.EventHandler(this.EditBtn_Click);
             // 
             // PatientsListView
             // 
             this.PatientsListView.AllowUserToAddRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
-            this.PatientsListView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Gadugi", 19.8F);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.PatientsListView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.PatientsListView.ColumnHeadersHeight = 4;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
+            this.PatientsListView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.Goldenrod;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Times New Roman", 15.2F);
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.Goldenrod;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.PatientsListView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            this.PatientsListView.ColumnHeadersHeight = 35;
             this.PatientsListView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Gadugi", 19.8F);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.PatientsListView.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI Semibold", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.PatientsListView.DefaultCellStyle = dataGridViewCellStyle6;
             this.PatientsListView.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.PatientsListView.Location = new System.Drawing.Point(14, 63);
             this.PatientsListView.Name = "PatientsListView";
             this.PatientsListView.RowHeadersVisible = false;
             this.PatientsListView.RowHeadersWidth = 45;
-            this.PatientsListView.RowTemplate.Height = 24;
+            this.PatientsListView.RowTemplate.Height = 28;
             this.PatientsListView.Size = new System.Drawing.Size(1139, 383);
             this.PatientsListView.TabIndex = 0;
             this.PatientsListView.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
-            this.PatientsListView.ThemeStyle.AlternatingRowsStyle.Font = null;
+            this.PatientsListView.ThemeStyle.AlternatingRowsStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.PatientsListView.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
             this.PatientsListView.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
             this.PatientsListView.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
             this.PatientsListView.ThemeStyle.BackColor = System.Drawing.Color.White;
             this.PatientsListView.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.PatientsListView.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.PatientsListView.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.Goldenrod;
             this.PatientsListView.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.PatientsListView.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Gadugi", 19.8F);
+            this.PatientsListView.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.PatientsListView.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
             this.PatientsListView.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            this.PatientsListView.ThemeStyle.HeaderStyle.Height = 4;
+            this.PatientsListView.ThemeStyle.HeaderStyle.Height = 35;
             this.PatientsListView.ThemeStyle.ReadOnly = false;
             this.PatientsListView.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
             this.PatientsListView.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            this.PatientsListView.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Gadugi", 19.8F);
+            this.PatientsListView.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.PatientsListView.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            this.PatientsListView.ThemeStyle.RowsStyle.Height = 24;
+            this.PatientsListView.ThemeStyle.RowsStyle.Height = 28;
             this.PatientsListView.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.PatientsListView.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.PatientsListView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.PatientsListView_CellContentClick);
             // 
             // panel8
             // 
