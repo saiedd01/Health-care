@@ -24,6 +24,13 @@ namespace Health_care
             string Query = "Select * from PatientTbl" ;
             PatientsListView.DataSource = Con.GetData(Query);
         }
+        private void Clear()
+        {
+            PatNameTb.Text = "";
+            PatGenCb.SelectedIndex = -1;
+            PatPhoneTb.Text = "";
+            PatAddTb.Text = "";
+        }
         private void SaveBtn_Click(object sender, EventArgs e)
         {
             if (PatNameTb.Text == "" || PatPhoneTb.Text == "" ||PatAddTb.Text=="" || PatGenCb.SelectedIndex==-1)
@@ -84,13 +91,7 @@ namespace Health_care
                 MessageBox.Show("Patient Updated");
             }
         }
-        private void Clear()
-        {
-            PatNameTb.Text = "";
-            PatGenCb.SelectedIndex = -1;
-            PatPhoneTb.Text = "";
-            PatAddTb.Text = "";
-        }
+        
         private void DeleteBtn_Click(object sender, EventArgs e)
         {
             if (key==0)
