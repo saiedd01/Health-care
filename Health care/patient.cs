@@ -41,6 +41,7 @@ namespace Health_care
                 Query = string.Format(Query, patient, Gender, bDate, phone, address);
                 Con.SetData(Query);
                 ShowPatients();
+                Clear();
                 MessageBox.Show("Patient Added");
             }
         }
@@ -79,7 +80,31 @@ namespace Health_care
                 Query = string.Format(Query, patient, Gender, bDate, phone, address,key);
                 Con.SetData(Query);
                 ShowPatients();
+                Clear();
                 MessageBox.Show("Patient Updated");
+            }
+        }
+        private void Clear()
+        {
+            PatNameTb.Text = "";
+            PatGenCb.SelectedIndex = -1;
+            PatPhoneTb.Text = "";
+            PatAddTb.Text = "";
+        }
+        private void DeleteBtn_Click(object sender, EventArgs e)
+        {
+            if (key==0)
+            {
+                MessageBox.Show("Select a Patient");
+            }
+            else
+            {
+                string Query = "Delete from PatientTbl where PatCode = {0}";
+                Query = string.Format(Query, key);
+                Con.SetData(Query);
+                ShowPatients();
+                Clear();
+                MessageBox.Show("Patient Deleted");
             }
         }
     }
