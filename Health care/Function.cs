@@ -12,23 +12,23 @@ namespace Health_care
     {
         private SqlConnection con;
         private SqlCommand cmd;
-        private SqlDataAdapter sda;
-        private DataTable data;
+        private SqlDataAdapter  adapter;
+        private DataTable dataTable;
         private string connstr;
 
         public Function()
         {
-            connstr = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C: \Users\HP\Documents\Health care systemDB.mdf;Integrated Security=True;Connect Timeout=30";
+            connstr = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\HP\Documents\Health care systemDB.mdf;Integrated Security=True;Connect Timeout=30";
             con = new SqlConnection(connstr);
             cmd = new SqlCommand();
             cmd.Connection = con;
         }
         public DataTable GetData(string Query)
         {
-            data = new DataTable();
-            sda = new SqlDataAdapter(Query, con);
-            sda.Fill(data);
-            return data;
+            dataTable = new DataTable();
+            adapter = new SqlDataAdapter(Query, con);
+            adapter.Fill(dataTable);
+            return dataTable;
         }
         public int SetData(string Query)
         {
