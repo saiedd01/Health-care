@@ -31,13 +31,15 @@ namespace Health_care
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(diagnosis));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
             this.pictureBox13 = new System.Windows.Forms.PictureBox();
             this.label14 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.testCb = new System.Windows.Forms.ComboBox();
+            this.patientCb = new System.Windows.Forms.ComboBox();
             this.DiagDateTb = new Guna.UI2.WinForms.Guna2DateTimePicker();
             this.ResultTb = new System.Windows.Forms.TextBox();
             this.DeleteBtn = new System.Windows.Forms.Button();
@@ -51,6 +53,7 @@ namespace Health_care
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.DiagnosisListView = new Guna.UI2.WinForms.Guna2DataGridView();
             this.label7 = new System.Windows.Forms.Label();
             this.guna2Elipse2 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2Elipse4 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
@@ -68,13 +71,11 @@ namespace Health_care
             this.pictureBox11 = new System.Windows.Forms.PictureBox();
             this.pictureBox12 = new System.Windows.Forms.PictureBox();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
-            this.patientCb = new System.Windows.Forms.ComboBox();
-            this.testCb = new System.Windows.Forms.ComboBox();
-            this.DiagnosisListView = new Guna.UI2.WinForms.Guna2DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).BeginInit();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.DiagnosisListView)).BeginInit();
             this.panel6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
@@ -82,7 +83,6 @@ namespace Health_care
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.DiagnosisListView)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox13
@@ -94,6 +94,7 @@ namespace Health_care
             this.pictureBox13.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox13.TabIndex = 23;
             this.pictureBox13.TabStop = false;
+            this.pictureBox13.Click += new System.EventHandler(this.pictureBox13_Click);
             // 
             // label14
             // 
@@ -137,6 +138,25 @@ namespace Health_care
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(1127, 219);
             this.panel3.TabIndex = 2;
+            // 
+            // testCb
+            // 
+            this.testCb.Font = new System.Drawing.Font("Gadugi", 12F);
+            this.testCb.FormattingEnabled = true;
+            this.testCb.Location = new System.Drawing.Point(32, 166);
+            this.testCb.Name = "testCb";
+            this.testCb.Size = new System.Drawing.Size(235, 32);
+            this.testCb.TabIndex = 29;
+            this.testCb.SelectedIndexChanged += new System.EventHandler(this.testCb_SelectedIndexChanged);
+            // 
+            // patientCb
+            // 
+            this.patientCb.Font = new System.Drawing.Font("Gadugi", 12F);
+            this.patientCb.FormattingEnabled = true;
+            this.patientCb.Location = new System.Drawing.Point(32, 82);
+            this.patientCb.Name = "patientCb";
+            this.patientCb.Size = new System.Drawing.Size(235, 32);
+            this.patientCb.TabIndex = 28;
             // 
             // DiagDateTb
             // 
@@ -292,6 +312,60 @@ namespace Health_care
             this.panel4.Size = new System.Drawing.Size(1127, 447);
             this.panel4.TabIndex = 1;
             // 
+            // DiagnosisListView
+            // 
+            this.DiagnosisListView.AllowUserToAddRows = false;
+            dataGridViewCellStyle13.BackColor = System.Drawing.Color.White;
+            this.DiagnosisListView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle13;
+            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle14.BackColor = System.Drawing.Color.Goldenrod;
+            dataGridViewCellStyle14.Font = new System.Drawing.Font("Times New Roman", 15.2F);
+            dataGridViewCellStyle14.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.Color.Goldenrod;
+            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DiagnosisListView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle14;
+            this.DiagnosisListView.ColumnHeadersHeight = 35;
+            this.DiagnosisListView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle15.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle15.Font = new System.Drawing.Font("Segoe UI Semibold", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle15.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle15.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle15.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle15.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.DiagnosisListView.DefaultCellStyle = dataGridViewCellStyle15;
+            this.DiagnosisListView.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.DiagnosisListView.Location = new System.Drawing.Point(32, 53);
+            this.DiagnosisListView.Name = "DiagnosisListView";
+            this.DiagnosisListView.RowHeadersVisible = false;
+            this.DiagnosisListView.RowHeadersWidth = 45;
+            this.DiagnosisListView.RowTemplate.Height = 28;
+            this.DiagnosisListView.Size = new System.Drawing.Size(1067, 379);
+            this.DiagnosisListView.TabIndex = 16;
+            this.DiagnosisListView.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
+            this.DiagnosisListView.ThemeStyle.AlternatingRowsStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DiagnosisListView.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
+            this.DiagnosisListView.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
+            this.DiagnosisListView.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
+            this.DiagnosisListView.ThemeStyle.BackColor = System.Drawing.Color.White;
+            this.DiagnosisListView.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.DiagnosisListView.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.Goldenrod;
+            this.DiagnosisListView.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.DiagnosisListView.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DiagnosisListView.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
+            this.DiagnosisListView.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            this.DiagnosisListView.ThemeStyle.HeaderStyle.Height = 35;
+            this.DiagnosisListView.ThemeStyle.ReadOnly = false;
+            this.DiagnosisListView.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
+            this.DiagnosisListView.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.DiagnosisListView.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DiagnosisListView.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.DiagnosisListView.ThemeStyle.RowsStyle.Height = 28;
+            this.DiagnosisListView.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.DiagnosisListView.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.DiagnosisListView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DiagnosisListView_CellContentClick);
+            // 
             // label7
             // 
             this.label7.AutoSize = true;
@@ -340,6 +414,7 @@ namespace Health_care
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(110, 691);
             this.panel6.TabIndex = 24;
+            this.panel6.Paint += new System.Windows.Forms.PaintEventHandler(this.panel6_Paint);
             // 
             // label15
             // 
@@ -393,6 +468,7 @@ namespace Health_care
             this.pictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox9.TabIndex = 20;
             this.pictureBox9.TabStop = false;
+            this.pictureBox9.Click += new System.EventHandler(this.pictureBox9_Click);
             // 
             // label18
             // 
@@ -414,6 +490,7 @@ namespace Health_care
             this.pictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox10.TabIndex = 18;
             this.pictureBox10.TabStop = false;
+            this.pictureBox10.Click += new System.EventHandler(this.pictureBox10_Click);
             // 
             // label19
             // 
@@ -435,6 +512,7 @@ namespace Health_care
             this.pictureBox11.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox11.TabIndex = 16;
             this.pictureBox11.TabStop = false;
+            this.pictureBox11.Click += new System.EventHandler(this.pictureBox11_Click);
             // 
             // pictureBox12
             // 
@@ -445,6 +523,7 @@ namespace Health_care
             this.pictureBox12.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox12.TabIndex = 15;
             this.pictureBox12.TabStop = false;
+            this.pictureBox12.Click += new System.EventHandler(this.pictureBox12_Click);
             // 
             // pictureBox7
             // 
@@ -455,79 +534,6 @@ namespace Health_care
             this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox7.TabIndex = 25;
             this.pictureBox7.TabStop = false;
-            // 
-            // patientCb
-            // 
-            this.patientCb.Font = new System.Drawing.Font("Gadugi", 12F);
-            this.patientCb.FormattingEnabled = true;
-            this.patientCb.Location = new System.Drawing.Point(32, 82);
-            this.patientCb.Name = "patientCb";
-            this.patientCb.Size = new System.Drawing.Size(235, 32);
-            this.patientCb.TabIndex = 28;
-            // 
-            // testCb
-            // 
-            this.testCb.Font = new System.Drawing.Font("Gadugi", 12F);
-            this.testCb.FormattingEnabled = true;
-            this.testCb.Location = new System.Drawing.Point(32, 166);
-            this.testCb.Name = "testCb";
-            this.testCb.Size = new System.Drawing.Size(235, 32);
-            this.testCb.TabIndex = 29;
-            this.testCb.SelectedIndexChanged += new System.EventHandler(this.testCb_SelectedIndexChanged);
-            // 
-            // DiagnosisListView
-            // 
-            this.DiagnosisListView.AllowUserToAddRows = false;
-            dataGridViewCellStyle7.BackColor = System.Drawing.Color.White;
-            this.DiagnosisListView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle7;
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle8.BackColor = System.Drawing.Color.Goldenrod;
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Times New Roman", 15.2F);
-            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.Goldenrod;
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.DiagnosisListView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle8;
-            this.DiagnosisListView.ColumnHeadersHeight = 35;
-            this.DiagnosisListView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle9.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("Segoe UI Semibold", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.DiagnosisListView.DefaultCellStyle = dataGridViewCellStyle9;
-            this.DiagnosisListView.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.DiagnosisListView.Location = new System.Drawing.Point(32, 53);
-            this.DiagnosisListView.Name = "DiagnosisListView";
-            this.DiagnosisListView.RowHeadersVisible = false;
-            this.DiagnosisListView.RowHeadersWidth = 45;
-            this.DiagnosisListView.RowTemplate.Height = 28;
-            this.DiagnosisListView.Size = new System.Drawing.Size(1067, 379);
-            this.DiagnosisListView.TabIndex = 16;
-            this.DiagnosisListView.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
-            this.DiagnosisListView.ThemeStyle.AlternatingRowsStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DiagnosisListView.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
-            this.DiagnosisListView.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
-            this.DiagnosisListView.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
-            this.DiagnosisListView.ThemeStyle.BackColor = System.Drawing.Color.White;
-            this.DiagnosisListView.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.DiagnosisListView.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.Goldenrod;
-            this.DiagnosisListView.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.DiagnosisListView.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DiagnosisListView.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
-            this.DiagnosisListView.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            this.DiagnosisListView.ThemeStyle.HeaderStyle.Height = 35;
-            this.DiagnosisListView.ThemeStyle.ReadOnly = false;
-            this.DiagnosisListView.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
-            this.DiagnosisListView.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            this.DiagnosisListView.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DiagnosisListView.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            this.DiagnosisListView.ThemeStyle.RowsStyle.Height = 28;
-            this.DiagnosisListView.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.DiagnosisListView.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            this.DiagnosisListView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DiagnosisListView_CellContentClick);
             // 
             // diagnosis
             // 
@@ -550,6 +556,7 @@ namespace Health_care
             this.panel3.PerformLayout();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.DiagnosisListView)).EndInit();
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
@@ -558,7 +565,6 @@ namespace Health_care
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.DiagnosisListView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
