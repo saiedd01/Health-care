@@ -108,5 +108,33 @@ namespace Health_care
                 MessageBox.Show("Patient Deleted");
             }
         }
+
+        private void pictureBox16_Click(object sender, EventArgs e)
+        {
+            Login logform = new Login();
+            logform.Show();
+            this.Hide();
+        }
+
+        private void pictureBox5_Click(object sender, EventArgs e)
+        {
+            tests TSform = new tests();
+            TSform.Show();
+            this.Hide();
+        }
+
+        private void pictureBox6_Click(object sender, EventArgs e)
+        {
+            diagnosis Diagform = new diagnosis();
+            Diagform.Show();
+            this.Hide();
+        }
+
+        private void pictureBox4_Click(object sender, EventArgs e)
+        {
+            Login logform = new Login();
+            logform.Show();
+            this.Hide();
+        }
     }
 }
