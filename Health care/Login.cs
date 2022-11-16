@@ -21,5 +21,25 @@ namespace Health_care
         {
 
         }
+
+        private void LoginBtn_Click(object sender, EventArgs e)
+        {
+            if (usernameTb.Text == "" || passwordTb.Text == "" )
+            {
+                MessageBox.Show("Missing Data !!!!");
+            }
+            else if (usernameTb.Text=="Admin"&& passwordTb.Text=="admin")
+            {
+                patient PTform = new patient();
+                PTform.Show();
+                this.Hide();
+            }
+            else
+            {
+                usernameTb.Text = "";
+                passwordTb.Text = "";
+
+            }
+        }
     }
 }
