@@ -174,9 +174,6 @@
         hxYU6knSVB1aUKgnSVN1aEGhniRNAAAAAAAAAAAAAABEGBr6H6msB7K5tvRFAAAAAElFTkSuQmCC
 </value>
   </data>
-  <metadata name="guna2Elipse2.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>1018, 17</value>
-  </metadata>
   <data name="pictureBox8.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAABGdBTUEAALGPC/xhBQAAAbFJREFUaEPt
@@ -295,4 +292,7 @@
         JjOn85U96E6Tla8apMnKlz3S1P26DQDesfsvq1b7AdE1Vs5aXci7AAAAAElFTkSuQmCC
 </value>
   </data>
+  <metadata name="guna2Elipse2.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>1018, 17</value>
+  </metadata>
 </root>
